@@ -1,7 +1,7 @@
 .PHONY: build run test test-db test-coordinator test-worker clean ts deps lint
 
 BINDIR  := ./bin
-SERVER  := $(BINDIR)/ctrq
+SERVER  := $(BINDIR)/ctrq-service
 CLI     := $(BINDIR)/ctrqctl
 
 # ── TypeScript ──────────────────────────────────────────────────────────────
@@ -11,8 +11,8 @@ ts:
 # ── Go build ────────────────────────────────────────────────────────────────
 build: ts
 	mkdir -p $(BINDIR)
-	go build -o $(SERVER) ./cmd/ctrq
-	go build -o $(CLI) ./cmd/ctrqctl
+	go build -o $(SERVER) ./cmd
+#	go build -o $(CLI) ./cmd
 
 # ── Run server ───────────────────────────────────────────────────────────────
 run: build

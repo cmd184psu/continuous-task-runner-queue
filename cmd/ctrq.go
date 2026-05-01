@@ -18,7 +18,7 @@ import (
 	"github.com/cmd184psu/ctrq/internal/worker"
 )
 
-func main() {
+func RunServices() {
 	cfgPath := flag.String("config", config.DefaultConfigPath, "path to config file")
 	flag.Parse()
 

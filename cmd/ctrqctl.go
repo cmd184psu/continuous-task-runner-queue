@@ -22,7 +22,7 @@ import (
 
 var baseURL string
 
-func main() {
+func RunCLI() {
 	urlFlag := flag.String("url", "", "override server URL (default: from config)")
 	flag.Parse()
 
